@@ -26,7 +26,7 @@ class Plugin extends PluginBase
                 'model' => new GenerationalCacheStrategy(
                     $cacheProvider, 
                     new ModelKeyGenerator(), 
-                    500 /* 0 = infinite lifetime */)
+                    7200 /* 0 = infinite lifetime */)
             ]);
             $cacheExtension = new CacheExtension($cacheStrategy);
 
