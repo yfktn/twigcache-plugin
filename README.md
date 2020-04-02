@@ -50,4 +50,8 @@ In another case, you have view to show detail of Eloquent database model and it 
 
 If you like to add another cache strategy, you may check the code at ```Yfktn\TwigCachePlugin\Classes\ModelKeyGenerator``` as the example, or write your own psr6 driver.
 
-For more information please consult to [twig cache plugin extension](https://github.com/twigphp/twig-cache-extension) page.
+As the bridge between psr6 and Laravel 5 Illuminate cache driver, we use [madewithlove/illuminate-psr-cache-bridge](https://github.com/madewithlove/illuminate-psr-cache-bridge)
+
+For more information about twig cache plugin extension please consult to [twig cache plugin extension](https://github.com/twigphp/twig-cache-extension) page.
+
+Note: My plugin is in early stages of its development, please use with care.
