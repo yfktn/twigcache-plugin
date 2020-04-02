@@ -6,3 +6,5 @@
     - make it work with OctoberCms
 0.0.3:
     - add chaining chace strategy, with options available are time and model
+0.0.4:
+    - bug with cache key for model with restricted char of "/"

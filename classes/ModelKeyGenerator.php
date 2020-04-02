@@ -11,6 +11,6 @@ class ModelKeyGenerator implements KeyGeneratorInterface {
      */
     public function generateKey($value)
     {
-        return get_class($value) . '_' . $value->id . '_' . $value->updated_at->format('YmdHis');
+        return str_replace("\\", ".", get_class($value)) . '_' . $value->id . '_' . $value->updated_at->format('YmdHis');
     }
 }
