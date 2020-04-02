@@ -1,0 +1,6 @@
+plugin:
+    name: 'yfktn.twigcacheplugin::lang.plugin.name'
+    description: 'yfktn.twigcacheplugin::lang.plugin.description'
+    author: 'Yan Friskantoni'
+    icon: oc-icon-compress
+    homepage: ''

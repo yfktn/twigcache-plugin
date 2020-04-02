@@ -1,0 +1,8 @@
+0.0.1:
+    - Initialize plugin.
+0.0.2:
+    - Add madewithlove/illuminate-psr-cache-bridge to make it work with Laravel Cache
+    - Add readme
+    - make it work with OctoberCms
+0.0.3:
+    - add chaining chace strategy, with options availabe is time and model
