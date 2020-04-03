@@ -5,6 +5,9 @@
     - Add readme
     - make it work with OctoberCms
 0.0.3:
-    - add chaining chace strategy, with options available are time and model
+    - add chaining cache strategy, with options available are time and model
 0.0.4:
     - bug with cache key for model with restricted char of "/"
+0.0.5:
+    - add blackhole strategy for easier development
+    - add config file
