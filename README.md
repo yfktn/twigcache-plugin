@@ -48,8 +48,6 @@ In another case, you have view to show detail of Eloquent database model and it 
 {% endcache %}
 ``` 
 
-If you like to add another cache strategy, you may check the code at ```Yfktn\TwigCachePlugin\Classes\ModelKeyGenerator``` as the example.
-
 ## Blackhole Cache Strategy
 
 When you are in development mode, you don't need twig loading previous generated cache to view. In the configuration file you can change value of *blackholeCacheStrategyMode* to true, this strategy prevents previously caching version from being rendered. 
