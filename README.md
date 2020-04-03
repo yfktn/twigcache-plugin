@@ -48,9 +48,15 @@ In another case, you have view to show detail of Eloquent database model and it 
 {% endcache %}
 ``` 
 
-If you like to add another cache strategy, you may check the code at ```Yfktn\TwigCachePlugin\Classes\ModelKeyGenerator``` as the example, or write your own psr6 driver.
+If you like to add another cache strategy, you may check the code at ```Yfktn\TwigCachePlugin\Classes\ModelKeyGenerator``` as the example.
 
-As the bridge between psr6 and Laravel 5 Illuminate cache driver, we use [madewithlove/illuminate-psr-cache-bridge](https://github.com/madewithlove/illuminate-psr-cache-bridge)
+## Blackhole Cache Strategy
+
+When you are in development mode, you don't need twig loading previous generated cache to view. In the configuration file you can change value of *blackholeCacheStrategyMode* to true, this strategy prevents previously caching version from being rendered. 
+
+## Illuminate Laravel Cache Bridge and Twig Cache Extension
+
+Twig Cache Extension strategy use PSR-6 as compatible adapter, but Laravel 5 illuminate haven't implemented it yet. Then, as the bridge between psr6 and Laravel 5 Illuminate cache driver, we use [madewithlove/illuminate-psr-cache-bridge](https://github.com/madewithlove/illuminate-psr-cache-bridge).
 
 For more information about twig cache plugin extension please consult to [twig cache plugin extension](https://github.com/twigphp/twig-cache-extension) page.
 
