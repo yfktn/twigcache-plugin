@@ -1,0 +1,12 @@
+{
+    "name": "yfktn/twigcacheplugin",
+    "type": "october-plugin",
+    "description": "October CMS Plugin to add Twig Cache Extension into OctoberCMS.",
+    "license": "MIT",
+    "homepage": "https://github.com/yfktn/twigcache-plugin",
+    "require": {
+        "composer/installers": "~1.0",
+        "twig/cache-extension": "~1.0",
+        "madewithlove/illuminate-psr-cache-bridge": "^1.0"
+    }
+}

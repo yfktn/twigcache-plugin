@@ -50,7 +50,9 @@ In another case, you have view to show detail of Eloquent database model and it 
 
 ## Blackhole Cache Strategy
 
-When you are in development mode, you don't need twig loading previous generated cache to view. In the configuration file you can change value of *blackholeCacheStrategyMode* to true, this strategy prevents previously caching version from being rendered. 
+When you are in development mode, you don't need twig loading previous generated cache to view. In the configuration file you can change value of *blackholeCacheStrategyMode* to true, this strategy prevents previously caching version from being rendered.
+
+True is the default value of *blackholeCacheStrategyMode*.
 
 ## Illuminate Laravel Cache Bridge and Twig Cache Extension
 
