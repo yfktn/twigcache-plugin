@@ -2,25 +2,12 @@
 
 Add [twig cache plugin extension](https://github.com/twigphp/twig-cache-extension) to octoberCMS.
 
-## Before installing This Plugin:
-You need to add 2 package into the *require* part of **composer.json** of OctoberCMS before installing this plugin.
-
-```
-"twig/cache-extension": "~1.0",
-"madewithlove/illuminate-psr-cache-bridge": "^1.0"
-```
-
-And then run composer to install those package.
-
-```
-$ composer install --no-dev
-```
 ## Installing The Plugin
 
+Since v0.0.6 we can installing the plugin from composer. From the root of octobercms path:
+
 ```
-$ cd octobercmsprojectpath/plugins
-$ mkdir yfktn
-$ git clone https://github.com/yfktn/twigcache-plugin.git twigcache-plugin
+$ composer require yfktn/twigcacheplugin
 ```
 
 ## How To Use
