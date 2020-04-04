@@ -1,4 +1,4 @@
-# Twig Cache Plugin for OctoberCMS
+# OctoberCMS Plugin to use Twig Cache Extension
 
 Add [twig cache plugin extension](https://github.com/twigphp/twig-cache-extension) to octoberCMS.
 

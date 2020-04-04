@@ -19,7 +19,7 @@ class Plugin extends PluginBase
     public function boot()
     {
         Event::Listen('cms.page.beforeDisplay', function (Controller $controller, $url, $page) {
-            if( config('Yfktn.TwigCachePlugin::blackholeCacheStrategyMode', false) ) {
+            if( !config('yfktn.twigcacheplugin::blackholeCacheStrategyMode') ) {
                 // trace_log('blackhole not activated');
                 $repository = \App::make(Repository::class);
                 $cacheProvider = new PsrCacheAdapter(new CacheItemPool($repository));
@@ -28,7 +28,7 @@ class Plugin extends PluginBase
                     'model' => new GenerationalCacheStrategy(
                         $cacheProvider, 
                         new ModelKeyGenerator(), 
-                        config('Yfktn.TwigCachePlugin::modelCacheStrategyLifetime', 7200) /* 0 = infinite lifetime */)
+                        config('yfktn.twigcacheplugin::modelCacheStrategyLifetime', 7200) /* 0 = infinite lifetime */)
                 ]);
                 $cacheExtension = new CacheExtension($cacheStrategy);
             } else {
