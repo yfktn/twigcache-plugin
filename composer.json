@@ -5,6 +5,6 @@
     "license": "MIT",
     "homepage": "https://github.com/yfktn/twigcache-plugin",
     "require": {
-        "twig/cache-extension": "~1.0",
+        "twig/cache-extension": "~1.0"
     }
 }
