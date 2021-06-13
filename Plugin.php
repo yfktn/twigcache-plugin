@@ -12,6 +12,7 @@ use Twig\CacheExtension\CacheStrategy\BlackholeCacheStrategy;
 use Yfktn\TwigCachePlugin\Classes\ModelKeyGenerator;
 use Cms\Classes\Controller;
 use Event;
+use Yfktn\TwigCachePlugin\Classes\OctLifetimeCacheStrategy;
 
 class Plugin extends PluginBase
 {
@@ -23,7 +24,10 @@ class Plugin extends PluginBase
                 // trace_log('blackhole not activated');
                 $cacheProvider = new PsrCacheAdapter(app('cache.psr6'));
                 $cacheStrategy = new IndexedChainingCacheStrategy([
-                    'time' => new LifetimeCacheStrategy($cacheProvider),
+                    'time' => new OctLifetimeCacheStrategy(
+                        $cacheProvider,
+                        config('yfktn.twigcacheplugin::octCacheStrategyLifetime', 600)
+                    ),
                     'model' => new GenerationalCacheStrategy(
                         $cacheProvider,
                         new ModelKeyGenerator(),

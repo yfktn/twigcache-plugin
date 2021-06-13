@@ -16,3 +16,9 @@
     - update readme
 0.0.7:
     - fix bug with config parameter name
+0.1.0: "!!! upgrade package to use with octobercms 1.1"
+0.1.1:
+    - some bug fixing
+0.1.2:
+    - add config of lifetime when using LifetimeCacheStrategy, so it easier to update lifetime value.
+    - update readme how to use default value of LifetimeCacheStrategy
