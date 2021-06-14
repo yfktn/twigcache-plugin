@@ -18,6 +18,8 @@ This plugin currently implement the ```IndexedChainingCacheStrategy()```, with *
 
 To use it, in your twig template, surround the code with a **cache** block at the part you want to cache.
 
+### LifetimeCacheStrategy
+
 Let say we have part of our homepage that we need to cache, and it would expired in 120 seconds, then our code would be:
 
 ```
@@ -28,7 +30,9 @@ Let say we have part of our homepage that we need to cache, and it would expired
 ``` 
 Or if you want to use value of ```octCacheStrategyLifetime```, you can use ```null``` value instead of 120.
 
-In another case, you have view to show detail of Eloquent database model and it would expired in 7200 seconds or when our model updated (*since the cache strategy need **created_at** field in your model as Carbon object to generated cache key, you need to make custom mutator if it doesn't exist*), then our code would be:
+### GenerationalCacheStrategy with model
+
+In another case, you have view to show detail of Eloquent database model and it would expired in 7200 seconds or when our model updated (*since the cache strategy need **updated_at** field in your model as Carbon object to generated cache key, you need to make custom mutator if it doesn't exist*), then our code would be:
 
 ```
 {# add model annotation #}
@@ -37,6 +41,7 @@ In another case, you have view to show detail of Eloquent database model and it 
     {# heavy lifting template stuff here, include/render other partials etc #}
 {% endcache %}
 ``` 
+7200 second is the default value of ```modelCacheStrategyLifetime```, you can set it ``0`` so it doesn't expired until **updated_at** value of model changed.
 
 ## Blackhole Cache Strategy
 
