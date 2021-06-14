@@ -21,11 +21,12 @@ To use it, in your twig template, surround the code with a **cache** block at th
 Let say we have part of our homepage that we need to cache, and it would expired in 120 seconds, then our code would be:
 
 ```
-{# add homepage annotation with time strategy, for 10 seconds #}
-{% cache "homepage" {time: 10} %}
+{# add homepage annotation with time strategy, for 120 seconds #}
+{% cache "homepage" {time: 120} %}
     {# heavy lifting template stuff here, include/render other partials etc #}
 {% endcache %}
 ``` 
+Or if you want to use value of ```octCacheStrategyLifetime```, you can use ```null``` value instead of 120.
 
 In another case, you have view to show detail of Eloquent database model and it would expired in 7200 seconds or when our model updated (*since the cache strategy need **created_at** field in your model as Carbon object to generated cache key, you need to make custom mutator if it doesn't exist*), then our code would be:
 
